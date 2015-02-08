@@ -38,10 +38,7 @@ public class Main {
 
         HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
 
-        HostnameVerifier allHostsValid = (hostname, session) ->
-        {
-            return true;
-        };
+        HostnameVerifier allHostsValid = (hostname, session) -> true;
 
         HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
     }
@@ -53,7 +50,8 @@ public class Main {
         Date startDateTime = dateFormat.parse("2015-01-01");
         Date endDateTime = dateFormat.parse("2015-01-31");
 
-        String baseAddress = "https://192.168.1.2"; // https://eta.asd116.ru
+        // https://eta.asd116.ru
+        String baseAddress = "https://192.168.1.2";
 
         String uri;
         uri = String.format(

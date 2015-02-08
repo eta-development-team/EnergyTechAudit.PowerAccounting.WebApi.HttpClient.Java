@@ -53,7 +53,7 @@ public class Main {
         Date startDateTime = dateFormat.parse("2015-01-01");
         Date endDateTime = dateFormat.parse("2015-01-31");
 
-        String baseAddress = "https://192.168.1.2";
+        String baseAddress = "https://192.168.1.2"; // https://eta.asd116.ru
 
         String uri;
         uri = String.format(
@@ -66,6 +66,9 @@ public class Main {
 
         URL url = new URL(uri);
 
+        // для возможности использования самоподписанного сертификата сервера
+        // после установки на сервер заверенного сертификата вызов данного
+        // метода будет не нужен
         EnableSelfSingedCertificate();
 
         HttpsURLConnection connection = null;

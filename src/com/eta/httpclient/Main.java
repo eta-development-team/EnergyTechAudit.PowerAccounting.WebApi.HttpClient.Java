@@ -78,7 +78,7 @@ public class Main {
             connection.setRequestMethod("GET");
 
             connection.setRequestProperty("login", "Archive.Downloader");
-            connection.setRequestProperty("password", "gh8nc3pe4");
+            connection.setRequestProperty("password", "xxxx");
 
             try(InputStream xml = connection.getInputStream())
             {
@@ -96,7 +96,10 @@ public class Main {
         }
         finally
         {
-            connection.disconnect();
+            if(connection != null)
+            {
+                connection.disconnect();
+            }
         }
     }
 }

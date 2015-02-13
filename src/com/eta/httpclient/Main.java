@@ -52,7 +52,7 @@ public class Main {
         Date endDateTime = dateFormat.parse("2015-01-31");
 
         // https://eta.asd116.ru
-        String baseAddress = "https://192.168.1.2";
+        String baseAddress = "https://eta.asd116.ru:8433";
 
         String uri;
 
@@ -79,7 +79,7 @@ public class Main {
 
             connection.setRequestMethod("GET");
             connection.setRequestProperty("login", "Archive.Downloader");
-            connection.setRequestProperty("password", "xxxx");
+            connection.setRequestProperty("password", "xxxxx");
 
             try(InputStream xml = connection.getInputStream())
             {

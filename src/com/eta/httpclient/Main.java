@@ -48,8 +48,8 @@ public class Main {
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-        Date startDateTime = dateFormat.parse("2015-01-01");
-        Date endDateTime = dateFormat.parse("2015-01-09");
+        Date startDateTime = dateFormat.parse("2015-04-01");
+        Date endDateTime = dateFormat.parse("2015-04-30");
 
         String baseAddress = "https://eta.asd116.ru:8433";
 
@@ -57,8 +57,8 @@ public class Main {
 
         uri = String.format(
                 "%s/api/package/archive?" +
-                "ar.withDictionaries=true&ar.startDateTime=%s&" +
-                "ar.endDateTime=%s&responseToFile=true",
+                "ar.withDictionaries=true&ar.measurementDeviceId=234&ar.periodTypeId=3&ar.periodBegin=%s&" +
+                "ar.periodEnd=%s&responseToFile=true",
                 baseAddress,
                 dateFormat.format(startDateTime),
                 dateFormat.format(endDateTime));

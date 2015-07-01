@@ -57,8 +57,8 @@ public class Main {
 
         uri = String.format(
                 "%s/api/package/archive?" +
-                "ar.withDictionaries=true&ar.measurementDeviceId=234&ar.periodTypeId=3&ar.periodBegin=%s&" +
-                "ar.periodEnd=%s&responseToFile=true",
+                "withDictionaries=true&measurementDeviceId=234&periodTypeId=3&periodBegin=%s&" +
+                "periodEnd=%s&responseToFile=true",
                 baseAddress,
                 dateFormat.format(startDateTime),
                 dateFormat.format(endDateTime));
@@ -78,7 +78,7 @@ public class Main {
 
             connection.setRequestMethod("GET");
             connection.setRequestProperty("login", "Archive.Downloader");
-            connection.setRequestProperty("password", "");
+            connection.setRequestProperty("password", "xxx");
 
             try(InputStream xml = connection.getInputStream())
             {

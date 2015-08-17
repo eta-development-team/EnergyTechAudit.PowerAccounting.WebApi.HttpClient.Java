@@ -48,10 +48,10 @@ public class Main {
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-        Date startDateTime = dateFormat.parse("2015-04-01");
-        Date endDateTime = dateFormat.parse("2015-04-30");
+        Date startDateTime = dateFormat.parse("2015-05-01");
+        Date endDateTime = dateFormat.parse("2015-05-30");
 
-        String baseAddress = "https://eta.asd116.ru:8433";
+        String baseAddress = "https://eta.asd116.ru:8443";
 
         String uri;
 

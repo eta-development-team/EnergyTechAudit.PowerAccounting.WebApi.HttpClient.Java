@@ -56,7 +56,7 @@ public class Main {
         String uri;
 
         uri = String.format(
-                "%s/api/package/archive?" +
+                "%s/api/package/measurementDeviceArchive?" +
                 "withDictionaries=true&measurementDeviceId=234&periodTypeId=3&periodBegin=%s&" +
                 "periodEnd=%s&responseToFile=true",
                 baseAddress,
